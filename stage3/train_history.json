@@ -1,0 +1,167 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "total": 1.2615687787919014,
+      "sent": 0.38323478619960294,
+      "target": 0.619127649532281,
+      "router": 0.8640196951625156,
+      "div": 4.2317488072862443e-07,
+      "macro_f1": 0.7658154415915547
+    },
+    "val": {
+      "macro_f1": 0.859194123683424,
+      "accuracy": 0.8596657205928729,
+      "per_class": {
+        "positive": 0.8478478478478478,
+        "neutral": 0.8656504785537044,
+        "negative": 0.8640840446487197
+      },
+      "macro_f1_sentence_semantic": 0.8484163744747502,
+      "macro_f1_target_semantic": 0.8589936067804048,
+      "macro_f1_hard_multi_entity": 0.8412341718890771,
+      "n_hard_multi_entity": 1205,
+      "macro_f1_hard_conflict": 0.0,
+      "n_hard_conflict": 5,
+      "macro_f1_hard_ambiguous": 0.3333333333333333,
+      "n_hard_ambiguous": 1,
+      "mean_routing_weights": [
+        0.5786066055297852,
+        0.3045254945755005,
+        0.11686792969703674
+      ]
+    }
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "total": 0.7145663601533383,
+      "sent": 0.18313181957634284,
+      "target": 0.3230379109651043,
+      "router": 0.6946554046212726,
+      "div": 0.0,
+      "macro_f1": 0.8956683304758646
+    },
+    "val": {
+      "macro_f1": 0.8808519239660105,
+      "accuracy": 0.8814254178492589,
+      "per_class": {
+        "positive": 0.8777187046882552,
+        "neutral": 0.885,
+        "negative": 0.879837067209776
+      },
+      "macro_f1_sentence_semantic": 0.8601184596082746,
+      "macro_f1_target_semantic": 0.8838192530551989,
+      "macro_f1_hard_multi_entity": 0.8788728547502745,
+      "n_hard_multi_entity": 1205,
+      "macro_f1_hard_conflict": 0.0,
+      "n_hard_conflict": 5,
+      "macro_f1_hard_ambiguous": 0.0,
+      "n_hard_ambiguous": 1,
+      "mean_routing_weights": [
+        0.6854717135429382,
+        0.2099461555480957,
+        0.10458216816186905
+      ]
+    }
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "total": 0.47176566040927853,
+      "sent": 0.06330223277070825,
+      "target": 0.21125280324643234,
+      "router": 0.6573687148145672,
+      "div": 0.0,
+      "macro_f1": 0.9403591356714743
+    },
+    "val": {
+      "macro_f1": 0.8880841705770904,
+      "accuracy": 0.8883632923368022,
+      "per_class": {
+        "positive": 0.8820960698689956,
+        "neutral": 0.8920760129078523,
+        "negative": 0.8900804289544236
+      },
+      "macro_f1_sentence_semantic": 0.8763316965539519,
+      "macro_f1_target_semantic": 0.8902046742836224,
+      "macro_f1_hard_multi_entity": 0.893837597714914,
+      "n_hard_multi_entity": 1205,
+      "macro_f1_hard_conflict": 0.0,
+      "n_hard_conflict": 5,
+      "macro_f1_hard_ambiguous": 0.0,
+      "n_hard_ambiguous": 1,
+      "mean_routing_weights": [
+        0.731779932975769,
+        0.16435876488685608,
+        0.10386127233505249
+      ]
+    }
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "total": 0.3350068060419729,
+      "sent": 0.014052877762898423,
+      "target": 0.1271063683626944,
+      "router": 0.6461585031472323,
+      "div": 0.0,
+      "macro_f1": 0.9662387172594941
+    },
+    "val": {
+      "macro_f1": 0.8931619284052643,
+      "accuracy": 0.8940397350993378,
+      "per_class": {
+        "positive": 0.8917874396135266,
+        "neutral": 0.8980617372577172,
+        "negative": 0.8896366083445492
+      },
+      "macro_f1_sentence_semantic": 0.8661359435781023,
+      "macro_f1_target_semantic": 0.8980944790333397,
+      "macro_f1_hard_multi_entity": 0.905088937376219,
+      "n_hard_multi_entity": 1205,
+      "macro_f1_hard_conflict": 0.0,
+      "n_hard_conflict": 5,
+      "macro_f1_hard_ambiguous": 0.0,
+      "n_hard_ambiguous": 1,
+      "mean_routing_weights": [
+        0.7836087346076965,
+        0.11842627823352814,
+        0.09796498715877533
+      ]
+    }
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "total": 0.2904633165821916,
+      "sent": 0.010736100936388208,
+      "target": 0.08679962150958596,
+      "router": 0.6430919469046541,
+      "div": 0.0,
+      "macro_f1": 0.9781925364361266
+    },
+    "val": {
+      "macro_f1": 0.8935953187809763,
+      "accuracy": 0.8937243771680857,
+      "per_class": {
+        "positive": 0.8911174785100286,
+        "neutral": 0.8954248366013072,
+        "negative": 0.8942436412315931
+      },
+      "macro_f1_sentence_semantic": 0.8731194295900178,
+      "macro_f1_target_semantic": 0.8978873339272382,
+      "macro_f1_hard_multi_entity": 0.9059387404665223,
+      "n_hard_multi_entity": 1205,
+      "macro_f1_hard_conflict": 0.0,
+      "n_hard_conflict": 5,
+      "macro_f1_hard_ambiguous": 0.0,
+      "n_hard_ambiguous": 1,
+      "mean_routing_weights": [
+        0.7843762636184692,
+        0.11706455051898956,
+        0.09855920821428299
+      ]
+    }
+  }
+]

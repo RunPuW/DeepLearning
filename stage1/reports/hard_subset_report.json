@@ -1,0 +1,38 @@
+[
+  {
+    "model_alias": "multitask_ProsusAI_finbert_marker_1_1",
+    "subset/multi_entity": 0.9054,
+    "subset/conflict": 0.8929,
+    "subset/ambiguous": 0.8988,
+    "n_multi_entity": 277,
+    "n_conflict": 92,
+    "n_ambiguous": 1656
+  },
+  {
+    "model_alias": "target_ProsusAI_finbert_concat",
+    "subset/multi_entity": 0.9117,
+    "subset/conflict": 0.8667,
+    "subset/ambiguous": 0.8915,
+    "n_multi_entity": 277,
+    "n_conflict": 92,
+    "n_ambiguous": 1656
+  },
+  {
+    "model_alias": "sentence_ProsusAI_finbert",
+    "subset/multi_entity": null,
+    "subset/conflict": null,
+    "subset/ambiguous": 0.829,
+    "n_multi_entity": 0,
+    "n_conflict": 0,
+    "n_ambiguous": 108
+  },
+  {
+    "model_alias": "target_ProsusAI_finbert_marker",
+    "subset/multi_entity": 0.8806,
+    "subset/conflict": 0.8248,
+    "subset/ambiguous": 0.884,
+    "n_multi_entity": 277,
+    "n_conflict": 92,
+    "n_ambiguous": 1656
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "comparison": {
+    "ambiguous": {
+      "n": 1656,
+      "normal_f1": 0.8259,
+      "oracle_f1": 0.8257,
+      "delta": -0.0002
+    },
+    "conflict": {
+      "n": 92,
+      "normal_f1": 0.582,
+      "oracle_f1": 0.5766,
+      "delta": -0.0055
+    },
+    "multi_entity": {
+      "n": 277,
+      "normal_f1": 0.8088,
+      "oracle_f1": 0.8082,
+      "delta": -0.0006
+    },
+    "none": {
+      "n": 656,
+      "normal_f1": 0.797,
+      "oracle_f1": 0.797,
+      "delta": 0.0
+    },
+    "overall": {
+      "n": 2445,
+      "normal_f1": 0.819,
+      "oracle_f1": 0.8189,
+      "delta": -0.0001
+    }
+  },
+  "conclusion": "INCONCLUSIVE",
+  "conclusion_text": "Oracle routing changes ambiguous F1 by only -0.0002 (|delta| <= 0.005). Neither router nor context expert provides signal. Root cause is likely the label distribution indistinguishability (see diag2_label_dist.py).",
+  "routing_dist": {
+    "ambiguous_normal": {
+      "base": 1512,
+      "conflict": 144
+    },
+    "ambiguous_oracle": {
+      "context": 1656
+    }
+  }
+}

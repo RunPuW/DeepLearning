@@ -1,0 +1,5 @@
+model_alias,backbone,input_mode,task_type,test_macro_f1,subset/multi_entity,subset/conflict,subset/ambiguous,n_multi_entity,n_conflict,n_ambiguous,seed,checkpoint_dir
+multitask_ProsusAI_finbert_marker_1_1,ProsusAI/finbert,marker,multitask,0.903,0.9054,0.8929,0.8988,277,92,1656,42,checkpoints\multitask_1_1
+target_ProsusAI_finbert_concat,ProsusAI/finbert,concat,target,0.8944,0.9117,0.8667,0.8915,277,92,1656,42,checkpoints\target_finbert_concat
+sentence_ProsusAI_finbert,ProsusAI/finbert,sentence,sentence,0.8893,,,0.829,0,0,108,42,checkpoints\sentence_finbert
+target_ProsusAI_finbert_marker,ProsusAI/finbert,marker,target,0.8871,0.8806,0.8248,0.884,277,92,1656,42,checkpoints\target_finbert_marker

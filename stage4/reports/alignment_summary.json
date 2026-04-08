@@ -1,0 +1,30 @@
+{
+  "policy": "always_on",
+  "predictions_file": "F:\\stage4\\checkpoints\\retrieval_model\\test_predictions_always_on_with_market.jsonl",
+  "stats": {
+    "total_samples": 10587,
+    "samples_with_market": 8142,
+    "disagreement_count": 3960,
+    "disagreement_rate": 0.4864,
+    "by_subset": {
+      "ambiguous": {
+        "total": 7285,
+        "disagree": 3552,
+        "disagree_rate": 0.4876
+      },
+      "none": {
+        "total": 857,
+        "disagree": 408,
+        "disagree_rate": 0.4761
+      }
+    }
+  },
+  "disagreement_directions": {
+    "semantic=positive | market=neutral": 818,
+    "semantic=negative | market=neutral": 803,
+    "semantic=neutral | market=positive": 772,
+    "semantic=negative | market=positive": 579,
+    "semantic=neutral | market=negative": 533,
+    "semantic=positive | market=negative": 455
+  }
+}

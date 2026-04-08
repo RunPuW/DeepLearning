@@ -1,0 +1,16 @@
+python train_conflict_router.py `
+    --backbone    "ProsusAI/finbert" `
+    --train_file  "data\train.jsonl" `
+    --val_file    "data\val.jsonl" `
+    --output_dir  "checkpoints/router_experts" `
+    --epochs      5 `
+    --batch_size  32 `
+    --lr          2e-5 `
+    --lambda_router 0.3 `
+    --lambda_div    0.1
+	
+	
+python ablation_router_experts.py `
+    --checkpoint  "checkpoints/router_experts/best_model.pt" `
+    --test_file   "data/test.jsonl" `
+    --output_dir  "ablation_results/"

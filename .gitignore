@@ -1,0 +1,45 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# IDE / editor files
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training artifacts
+**/data/
+**/checkpoints/
+**/checkpoints_*/
+**/reports_1/
+**/train.jsonl
+**/val.jsonl
+**/test.jsonl
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.bin
+**/*.safetensors
+
+# Retrieval indexes, caches, and local corpora
+**/router_cache/
+**/*.db
+**/*.arrow
+**/retrieval_cache.jsonl
+**/retrieval_corpus.jsonl
+**/FinMarBa/train/
+
+# Backups and logs
+*.backup
+*.log

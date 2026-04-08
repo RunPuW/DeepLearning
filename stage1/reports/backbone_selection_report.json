@@ -1,0 +1,13 @@
+{
+  "backbone_analysis": [
+    {
+      "backbone": "ProsusAI/finbert",
+      "best_overall_f1": 0.903,
+      "best_model_alias": "multitask_ProsusAI_finbert_marker_1_1",
+      "best_conflict_f1": 0.8929,
+      "best_multi_entity_f1": 0.9054,
+      "n_models_tested": 4
+    }
+  ],
+  "recommendation": "ProsusAI/finbert"
+}

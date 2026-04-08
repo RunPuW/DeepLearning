@@ -1,0 +1,44 @@
+# Step 1: 构建检索语料
+python build_retrieval_corpus.py `
+  --data_dir F:\stage1\data `
+  --fnspid   F:\stage1\data\fnspid_sample_50k.jsonl `
+  --output   F:\stage1\retrieval_corpus.jsonl
+
+# Step 2: 建 Milvus 向量索引
+python index_builder.py `
+  --corpus   F:\stage4\retrieval_corpus.jsonl `
+  --db       F:\stage4\milvus_retrieval.db `
+  --backbone ProsusAI/finbert
+  
+# Step 3: 预计算不确定性 + 缓存检索结果
+python train_with_retrieval.py --stage cache `
+  --backbone             ProsusAI/finbert `
+  --data_dir             F:\stage4\data `
+  --db                   F:\stage4\milvus_retrieval.db `
+  --cache                F:\stage4\retrieval_cache.jsonl `
+  --baseline_checkpoint  F:\stage4\checkpoints\target_finbert_concat\best_checkpoint
+
+# Step 4: 训练 + 三种策略对比评估
+python train_with_retrieval.py --stage train `
+  --backbone   ProsusAI/finbert `
+  --data_dir   F:\stage4\data `
+  --cache      F:\stage4\retrieval_cache.jsonl `
+  --output_dir F:\stage4\checkpoints\retrieval_model
+
+# Step 5: 分析 alignment
+python analyze_alignment.py `
+  --predictions_dir F:\stage4\checkpoints\retrieval_model `
+  --data_dir        F:\stage4\data `
+  --output_dir      F:\stage4\reports `
+  --policy          always_on
+  
+  
+python train_with_retrieval.py --stage cache `
+  --backbone             ProsusAI/finbert `
+  --data_dir             F:\stage4\data `
+  --host                 180.184.67.7 `
+  --port                 19530 `
+  --db_name              DL_project `
+  --collection           financial_corpus `
+  --cache                F:\stage4\retrieval_cache.jsonl `
+  --baseline_checkpoint  F:\stage4\checkpoints\target_finbert_concat\best_checkpoint
