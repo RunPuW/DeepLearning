@@ -1,0 +1,155 @@
+{
+  "version": "1.0",
+  "created_at": "2026-04-02T21:12:00+08:00",
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "source_file": "final_integrated.jsonl",
+  "source_rows": 29259,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 14798,
+      "md5": "2a0641b319489a3aa89da9b9b55109ea",
+      "hard_subsets": {
+        "multi_entity": 5607,
+        "conflict": 25,
+        "ambiguous": 2,
+        "any_hard": 5624
+      },
+      "task_type_counts": {
+        "target_semantic": 11411,
+        "sentence_semantic": 3387
+      },
+      "label_counts": {
+        "neutral": 6563,
+        "positive": 4821,
+        "negative": 3414
+      }
+    },
+    "val": {
+      "file": "val.jsonl",
+      "rows": 3171,
+      "md5": "e9a8f7a8e1b4ef13cf610d42c5a58435",
+      "hard_subsets": {
+        "multi_entity": 1205,
+        "conflict": 5,
+        "ambiguous": 1,
+        "any_hard": 1209
+      },
+      "task_type_counts": {
+        "target_semantic": 2445,
+        "sentence_semantic": 726
+      },
+      "label_counts": {
+        "neutral": 1406,
+        "positive": 1033,
+        "negative": 732
+      }
+    },
+    "test": {
+      "file": "test.jsonl",
+      "rows": 3171,
+      "md5": "3800f8c4cd0306ffad06003a9542d6c2",
+      "hard_subsets": {
+        "multi_entity": 1208,
+        "conflict": 2,
+        "ambiguous": 1,
+        "any_hard": 1211
+      },
+      "task_type_counts": {
+        "target_semantic": 2445,
+        "sentence_semantic": 726
+      },
+      "label_counts": {
+        "neutral": 1406,
+        "positive": 1033,
+        "negative": 732
+      }
+    },
+    "analysis": {
+      "file": "analysis.jsonl",
+      "rows": 8119,
+      "md5": "1c3e298a9e31813910cd049164c58e5d",
+      "note": "market_aux rows excluded from supervised evaluation"
+    }
+  },
+  "hard_subset_definitions": {
+    "multi_entity": "target_semantic rows where the same text shares >=2 distinct target entities in the corpus. Tests ability to handle multi-entity documents.",
+    "conflict": "(text, target) pairs that appear with >=2 distinct sentiment labels across the corpus. Reflects genuine annotator/source disagreement.",
+    "ambiguous": "sentence_semantic rows where the same text text appears with >=2 distinct sentiment labels in the corpus (FPB boundary agreement cases)."
+  },
+  "bias_checklist": {
+    "cross_split_exact_leakage": {
+      "val_texts_in_train": 958,
+      "test_texts_in_train": 965,
+      "total": 1923
+    },
+    "near_duplicate_leakage": {
+      "threshold": 0.85,
+      "eval_sample_size": 500,
+      "near_dup_pairs_found": 158,
+      "note": "Sampled 500 from val+test vs all train. Jaccard >= 0.85 on 8-char shingles."
+    },
+    "uid_uniqueness": {
+      "ok": true,
+      "duplicate_count": 0,
+      "examples": []
+    },
+    "label_balance": {
+      "train": {
+        "neutral": {
+          "count": 6563,
+          "pct": 44.35
+        },
+        "positive": {
+          "count": 4821,
+          "pct": 32.58
+        },
+        "negative": {
+          "count": 3414,
+          "pct": 23.07
+        }
+      },
+      "val": {
+        "neutral": {
+          "count": 1406,
+          "pct": 44.34
+        },
+        "positive": {
+          "count": 1033,
+          "pct": 32.58
+        },
+        "negative": {
+          "count": 732,
+          "pct": 23.08
+        }
+      },
+      "test": {
+        "neutral": {
+          "count": 1406,
+          "pct": 44.34
+        },
+        "positive": {
+          "count": 1033,
+          "pct": 32.58
+        },
+        "negative": {
+          "count": 732,
+          "pct": 23.08
+        }
+      }
+    },
+    "future_info_leakage": {
+      "verdict": "not_applicable",
+      "note": "FPB, SEntFiN, FinEntity have no publication timestamps. FinMarBa is market_aux only and excluded from supervised eval."
+    },
+    "split_pollution": {
+      "ok": true,
+      "note": "Each UID appears in exactly one split."
+    }
+  }
+}
